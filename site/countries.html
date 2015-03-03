@@ -20,7 +20,7 @@ description: "In the first year of the Let Girls Learn collaboration, Peace Corp
 		data-bottom-top="transform:translate3d(-50%, 200%, 0px)"
 		data-top-bottom="transform:translate3d(-50%, 0%, 0px)"
     >
-    <div class="parallax__bg"
+    <div class="parallax__bg" title="{{ country.name }}"
       style="background-image:url(img/img_country_bg_{{ country.name | downcase | replace:' ','-' }}.jpg);
       "
       {% if forloop.first %}
@@ -73,7 +73,7 @@ description: "In the first year of the Let Girls Learn collaboration, Peace Corp
     <div class="panel__background">
     {% for next_country in site.data.countries %}
       {% if forloop.first %}
-        <div class="panel__background__img"
+        <div class="panel__background__img" title="{{ next_country.name }}"
           style="background-image:url(img/img_country_bg_{{ next_country.name | downcase | replace:' ','-' }}.jpg);
             ">
         </div>
@@ -126,7 +126,7 @@ description: "In the first year of the Let Girls Learn collaboration, Peace Corp
       <div class="panel__background">
         {% for next_country in site.data.countries offset:1 %}
           {% if forloop.index == current_index %}
-            <div class="panel__background__img"
+            <div class="panel__background__img" title="{{ next_country.name }}"
               style="background-image:url(img/img_country_bg_{{ next_country.name | downcase | replace:' ','-' }}.jpg);
                 ">
             </div>
