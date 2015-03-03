@@ -1,0 +1,64 @@
+/*
+ * All element specific rules.
+ *
+ * When this file starts to get large it should be made into a folder with
+ * files specific to each thing, such as elememts/_text.scss
+ */
+
+@import "globals";
+
+html, body {
+  margin: 0;
+  overflow-x: hidden;
+  height:100%;
+}
+html {
+  @include box-sizing(border-box);
+}
+* {
+  &, &:before, &:after {
+    @include box-sizing(inherit);
+  }
+}
+
+body {
+  background-color: $neutral_light;
+  border-color: $primary;
+  -webkit-font-smoothing: subpixel-antialiased;
+  margin-top:0;
+  margin-bottom:0;
+  margin-right:0;
+  margin-left:0;
+}
+
+figure {
+  margin: 0;
+}
+
+form ul {
+  @extend .u-unmarked_list;
+  @extend .u-inline_list;
+}
+
+fieldset {
+  border-width: 0;
+}
+
+ul {
+  margin: 0;
+}
+
+button {
+  cursor: pointer;
+}
+
+h1, h2, h3, h4, h5 {
+  a {
+    text-decoration: none;
+  }
+}
+
+a img {
+  border: 0;
+  outline: 0;
+}

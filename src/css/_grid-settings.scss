@@ -1,0 +1,23 @@
+@import "neat-helpers";
+
+/*
+ * Grid
+ */
+$base: 15;
+$grid-columns: 12;
+$column: 5.2em;
+$gutter: 1em;
+$max-width: 73.33333333333333333em;
+
+$sm_cols: 4;
+$md_cols: 9;
+
+/*
+ * Breakpoint
+ */
+$sm: new-breakpoint(min-width 0px max-width 499px $sm_cols);
+$md: new-breakpoint(min-width 500px max-width 899px $md_cols);
+$lg: new-breakpoint(min-width 900px 12);
+
+$md-height: new-breakpoint(max-height 650px);
+$sm-height: new-breakpoint(max-height 584px);

@@ -1,0 +1,110 @@
+
+@import "../globals";
+@import "../mixins";
+
+// Section
+//
+// Section(s) are for main, separated visual block of content.
+//
+// Markup:
+// <div class="section {{ modifier_class }}">
+//   <p class="section__content">Lorem ipsum gravida dolor in efficitur.
+//     Curabitur eget ipsum vel urna eleifend viverra. Curabitur vitae
+//     ligula quis orci vehicula
+//   </p>
+// </div>
+//
+// .section--white  - White background.
+// .section--neutral_dark  - Neutral dark background with dark gray foreground.
+// .section--neutral_medium  - Neutral medium background.
+// .section__box  - An element for stacked section content.
+// ..section--no_tm  - No top padding.
+// ..section--no_bm  - No bottom padding.
+//
+// Styleguide components.section
+.section {
+  @include clearfix;
+  clear: left;
+
+  @include media($md) {
+    padding-left: 1em;
+    padding-right: 1em;
+  }
+
+  @include media($sm) {
+    padding-left: 1em;
+    padding-right: 1em;
+  }
+}
+
+.section--white {
+  background-color: $white;
+}
+
+.section--neutral_dark {
+  background-color: $neutral_dark;
+  color: $gray-2;
+}
+
+.section--neutral_medium {
+  background-color: $neutral_medium;
+}
+
+.section--no_tm {
+  .section__content {
+    padding-top: 0;
+  }
+}
+.section--no_bm {
+  .section__content {
+    padding-bottom: 0;
+  }
+}
+
+.section__content {
+  padding-top: 2.5em;
+  padding-bottom: 2.5em;
+
+  @include media($sm) {
+    padding-top: 1.5em;
+    padding-bottom: 1.5em;
+  }
+}
+.section__content--lg {
+  padding-top: 4.5em;
+  padding-bottom: 3em;
+}
+.section__content--xsm {
+  padding-top: 0.5em;
+  padding-bottom: 0.5em;
+
+}
+.section__content--sm {
+  padding-top: 1em;
+  padding-bottom: 1em;
+}
+
+.section__box {
+  padding: $gutter;
+
+  > *:last-child {
+    margin-bottom: 0;
+  }
+
+  & + & {
+    margin-top: 2.6em;
+  }
+}
+
+.section__page-header {
+  position:relative;
+  width:100%;
+  overflow:hidden;
+  .banner--page {
+    position:absolute;
+    top:0;
+  }
+  @include media($sm) {
+
+  }
+}

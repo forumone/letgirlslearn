@@ -1,0 +1,38 @@
+// Anchor links
+
+.anchor {
+  clear: left;
+  margin-top: 0;
+
+  @include media($sm) {
+    padding: 0 1em;
+  }
+
+  .anchor__text {
+    display: inline-block;
+    margin-left: .4em;
+    a {
+      text-decoration: none;
+    }
+    h5 {
+      line-height: 0.6;
+      margin-bottom: 0;
+    }
+    .t-body--sm {
+      color: $gray-2;
+      line-height: 1.3;
+    }
+  }
+  .anchor__link {
+    color: $gray-1;
+    text-decoration: none;
+  }
+  .anchor__icon {
+    display: inline-block;
+  }
+}
+
+.anchor_linker {
+  position: absolute;
+  top: -8em;
+}

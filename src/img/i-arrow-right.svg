@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="9px" height="14px" viewBox="0 0 9 14" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+    <!-- Generator: Sketch 3.2.2 (9983) - http://www.bohemiancoding.com/sketch -->
+    <title>i-down_arrow</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Campaign-Page" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+        <g id="Campaign-Page---Client-Content" sketch:type="MSArtboardGroup" transform="translate(-737.000000, -1917.000000)" fill="#AAA698">
+            <g id="i-down_arrow" sketch:type="MSLayerGroup" transform="translate(741.500000, 1924.000000) rotate(180.000000) translate(-741.500000, -1924.000000) translate(737.000000, 1916.421053)">
+                <g id="Campaign-Page" transform="translate(4.500000, 7.578947) rotate(90.000000) translate(-4.500000, -7.578947) translate(-2.842105, 3.315789)" sketch:type="MSShapeGroup">
+                    <g id="Campaign-Page---Client-Content" transform="translate(0.000000, 0.000000)">
+                        <g id="next-arrow---positive" transform="translate(0.248768, 0.000000)">
+                            <path d="M7.16123255,8.09420211 L0.224916774,0.602981053 L0.783232579,0 L7.16123255,6.88824 L13.5395484,0 L14.0978641,0.602981053 L7.16123255,8.09420211" id="Imported-Layers-2"></path>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

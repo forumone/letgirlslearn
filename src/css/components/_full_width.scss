@@ -1,0 +1,10 @@
+// Full width
+//
+// A full width container of content or background imagery.
+//
+// Styleguide components.full_width
+
+.full_width {
+  @include outer-container;
+  width: 100%;
+}

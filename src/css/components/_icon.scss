@@ -1,0 +1,18 @@
+// Icon
+
+.icon {
+  display: inline-block;
+}
+
+.icon--img {
+  color: $white;
+  display: block;
+  margin-bottom: 1.5em;
+  text-align: center;
+  text-decoration: none;
+
+  &:hover {
+    color: $white;
+    text-decoration: underline;
+  }
+}

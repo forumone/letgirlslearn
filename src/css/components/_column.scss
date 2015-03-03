@@ -1,0 +1,60 @@
+/*
+ * Column
+ *
+ * A vertical column of elements that changes to a row at sm breakpoint.
+ */
+
+@import "../globals";
+@import "../grid-settings";
+
+// Alias
+$cols: $grid-columns;
+
+.column {
+
+  @include media($sm) {
+    margin-top: 1em;
+  }
+}
+
+.column--shift_1 {
+  @include shift(1);
+  @include media($sm) {
+    @include shift(0);
+  }
+}
+
+.column--half {
+  @include span-columns($cols / 2);
+
+  @include media($sm) {
+    @include span-columns($sm_cols);
+  }
+}
+
+.column--third {
+  @include span-columns($cols / 3);
+
+  @include media($sm) {
+    @include span-columns($sm_cols);
+  }
+}
+
+.column--two_third {
+  @include span-columns(round($cols * .66));
+
+  @include media($sm) {
+    @include span-columns($sm_cols);
+  }
+}
+
+.column--sixth {
+  @include span-columns(2);
+}
+
+.column--quarter {
+  @include span-columns($cols / 4);
+  @include media($sm) {
+    @include span-columns(4);
+  }
+}

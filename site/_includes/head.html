@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+
+  <!-- Basic Page Needs
+  ================================================== -->
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+  <!-- Mobile Specific Metas
+  ================================================== -->
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0,
+      maximum-scale=1.0, user-scalable=0">
+
+  <!-- Twitter and OpenGraph data
+  ================================================== -->
+  <meta property="og:title" content="{% if page.subtitle %}{{ page.subtitle }}{% else %}Let Girls Learn{% endif %}" />
+  <meta property="og:site_name" content="Peace Corps - Let Girls Learn" />
+  <meta property="og:url" content="{{ site.basedomain }}/{{ page.path }}" />
+  <meta property="og:type" content="website" />
+  <meta property="og:description" content="{% if page.description %}{{ page.description | strip_html }}{% else %}{{ site.default_description }}{% endif %}" />
+  <meta property="og:image" content="{{ site.basedomain }}/img/opengraph.jpg" />
+  <meta name="twitter:site" content="@PeaceCorps">
+  <meta name="twitter:creator" content="@PeaceCorps">
+  <meta name="twitter:title" content="{% if page.subtitle %}{{ page.subtitle }}{% else %}Let Girls Learn{% endif %}">
+  <meta property="twitter:description" content="{% if page.description %}{{ page.description | strip_html }}{% else %}{{ site.default_description }}{% endif %}" />
+  <meta name="twitter:card" content="summary_large_image">
+  <meta property="twitter:image:src" content="{{ site.basedomain }}/img/opengraph.jpg" />
+
+  <link rel="canonical" href="{{ site.basedomain }}/{{ page.path }}" />
+
+  <!-- title, description, and image may change per-page, per-post -->
+  <title>Let Girls Learn</title>
+  <meta name="description" content="{% if page.description %}{{ page.description | strip_html }}{% else %}{{ site.default_description }}{% endif %}">
+
+  <!-- Favicons
+  ================================================== -->
+  <link rel="icon" type="image/x-icon" href="favicon.ico" />
+  <link rel="apple-touch-icon" sizes="57x57" href="/apple-touch-icon-57x57.png">
+  <link rel="apple-touch-icon" sizes="60x60" href="/apple-touch-icon-60x60.png">
+  <link rel="apple-touch-icon" sizes="72x72" href="/apple-touch-icon-72x72.png">
+  <link rel="apple-touch-icon" sizes="76x76" href="/apple-touch-icon-76x76.png">
+  <link rel="apple-touch-icon" sizes="114x114" href="/apple-touch-icon-114x114.png">
+  <link rel="apple-touch-icon" sizes="120x120" href="/apple-touch-icon-120x120.png">
+  <link rel="apple-touch-icon" sizes="144x144" href="/apple-touch-icon-144x144.png">
+  <link rel="apple-touch-icon" sizes="152x152" href="/apple-touch-icon-152x152.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon-180x180.png">
+  <link rel="icon" type="image/png" href="/favicon-32x32.png" sizes="32x32">
+  <link rel="icon" type="image/png" href="/favicon-194x194.png" sizes="194x194">
+  <link rel="icon" type="image/png" href="/favicon-96x96.png" sizes="96x96">
+  <link rel="icon" type="image/png" href="/android-chrome-192x192.png" sizes="192x192">
+  <link rel="icon" type="image/png" href="/favicon-16x16.png" sizes="16x16">
+  <link rel="manifest" href="/manifest.json">
+  <meta name="msapplication-TileColor" content="#da532c">
+  <meta name="msapplication-TileImage" content="/mstile-144x144.png">
+  <meta name="theme-color" content="#c93f16">
+
+
+  <link rel="stylesheet" href="css/letgirlslearn.min.css" />
+
+<!--
+ssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssss
+ssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssss
+ssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssss
+ssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssss
+ssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssss
+ssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssss
+ssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssss
+ssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssss
+ssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssss
+ssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssss
+ssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssss
+ssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssss
+ssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssss
+ssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssss
+ssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssss
+ssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssss
+ssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssss
+ssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssss
+ssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssss
+ssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssss
+ssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssss
+ssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssss
+ssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssss
+ssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssss
+ssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssss
+ssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssss
+ssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssss
+ssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssss
+ssssssssssssssssssssssssssssssssssssso        osssssssssso/-.```.-/osssssssssss:            -ossssss
+sssssssssssssssssssssssssssssssssssss++++++-  osssssssso-  `-///-`  -osssssssss-  -+++++++++-ossssss
+sssssssssssssssssssssssssssssssssssssssssss-  ossssssso. `/ossssso/` .ossssssss-  osssssssssssssssss
+sssssssssssssssssssssssssssssssssssssssssss-  osssssss/  /sssssssss/  /ssssssss-  osssssssssssssssss
+sssssssssssssssssssssssssssssssssssssssssss-  osssssss/  /sssssssss/  /ssssssss-  osssssssssssssssss
+sssssssssssssssssssssssssssssssssssssssssss-  ossssssso. `/sssssss/` `ossssssss-  osssssssssssssssss
+sssssssssssssssssssssssssssssssssssssssssss-  osssssssso-  .:///:.  -osssssssss-  osssssssssssssssss
+sssssssssssssssssssssssssssssssssssssssssss-  ossssssss+:`   ````   -/ossssssss-  osssssssssssssssss
+sssssssssssssssssssssssssssssssssssssssssss-  ossssss/.` .:++oooo+/-` `:ossssss-  osssssssssssssssss
+sssssssssssssssssssssssssssssssssssssssssss-  osssso-  -+osssssssssso/` `/sssss-  osssssssssssssssss
+sssssssssssssssssssssssssssssssssssssssssss-  ossso. `/ssssssssssssssso-  /ssss-  osssssssssssssssss
+sssssssssssssssssssssssssssssssssssssssssss-  osss-  /ssssssssssssssssso. `osss-            -sssssss
+sssssssssssssssssssssssssssssssssssssssssss-  osss  `sssssssssssssssssss/  /sss-  -+++++++++-sssssss
+sssssssssssssssssssssssssssssssssssssssssss-  osss  .sssssssssssssssssss/  :sss-  osssssssssssssssss
+sssssssssssssssssssssssssssssssssssssssssss-  osss.  ossssssssssssssssss-  +sss-  osssssssssssssssss
+sssssssssssssssssssssssssssssssssssssssssss-  osss+` .ossssssssssssssss:  -ssss-  osssssssssssssssss
+sssssssssssssssssssssssssssssssssssssssssss-  ossss+` `/ossssssssssss+-  -sssss-  osssssssssssssssss
+sssssssssssssssssssssssssssssssssssssssssss-  ossssso:` `:+oooooooo/-  .+ssssss-  osssssssssssssssss
+sssssssssssssssssssssssssssssssssssssssssss-  ossssssso/.` ``....`  `-+ssssssss-  osssssssssssssssss
+ssssssssssssssssssssssssssssssssssssssssssso++ssssssssssso+/::-:://osssssssssss+++ssssssssssssssssss
+ssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssss
+ssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssss
+ssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssss
+
+Hi there! Great job on pulling back the curtain. It's been fantastic working with the Peace Corps on
+this project! We're always looking for curious people with diverse skill-sets.
+
+Let's talk at 18f@gsa.gov
+
+-->
+
+
+  <noscript>
+    <link href='https://fonts.googleapis.com/css?family=Lato:300,400'
+          rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css"
+          href="https://cloud.typography.com/6638272/785506/css/fonts.css" />
+  </noscript>
+
+  <script>
+  (function() {
+    function appendFont(name, href) {
+      var style = document.createElement((href ? 'link' : 'style'));
+      style.rel = 'stylesheet';
+      if (href) {
+        style.href = ('https:' === document.location.protocol ?
+          'https://' : 'http://') + href;
+      } else {
+        style.textContent = localStorage[name];
+      }
+      document.head.appendChild(style);
+    }
+    function loadFont(name, href) {
+      try {
+        if (localStorage[name]) {
+          appendFont(name);
+        } else {
+          // We have to first load the font file asynchronously
+          var request = new XMLHttpRequest();
+          request.open('GET', href, true);
+
+          request.onload = function() {
+            if (request.status >= 200 && request.status < 400) {
+              // We save the file in localStorage
+              localStorage[name] = request.responseText;
+
+              appendFont(name);
+            }
+          }
+          request.send();
+        }
+      } catch(ex) {};
+    };
+    var ua = window.navigator.userAgent;
+
+    if( ua.indexOf( "Android 4." ) > -1 &&
+        ua.indexOf( "like Gecko" ) > -1 &&
+        ua.indexOf( "Chrome" ) === -1 ) {
+      // Android likes ttf way more then woff.
+      loadFont('lato', 'fonts/data-ttf.css');
+    } else {
+      loadFont('lato', 'fonts/data-woff.css');
+    }
+    appendFont('archer', 'cloud.typography.com/6638272/785506/css/fonts.css');
+  })();
+  </script>
+
+</head>
+<body style="position: relative;">
+<!--[if lte IE 8]>
+  <section>
+    <h2>Your browser is out of date.</h2>
+    <p style="color: #000;">
+      You are using an older version of Internet Explorer. For a better
+      experience, please update your browser to the latest version.
+    </p>
+    <p>
+      <a target="_blank"
+         href="http://browsehappy.com/">Learn how to update your browser.</a>
+    </p>
+  </section>
+<![endif]-->

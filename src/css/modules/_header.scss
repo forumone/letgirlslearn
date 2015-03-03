@@ -1,0 +1,26 @@
+// Header
+
+.header {
+  position: relative;
+
+  .header__logo {
+    left: 3%;
+    position: absolute;
+
+    @include media($sm) {
+      position: static;
+      text-align: center;
+    }
+    .logo__img {
+      margin-left: 0;
+    }
+  }
+
+  .header__title {
+    margin: 0 auto;
+    min-height: 5.5em;
+    padding-bottom: 0.5em;
+    text-align:center;
+    width: 60%;
+  }
+}

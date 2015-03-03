@@ -1,0 +1,32 @@
+// Footer
+
+
+// I'm going to experiment with just tag as Shawn Allen wanted me to.
+footer {
+  .nested_column--stacked {
+    margin-bottom: 2.5em;
+  }
+  @include media($md) {
+    .inset--lg {
+      padding-left: 1em;
+      padding-right: 1em;
+    }
+  }
+  @include media($sm) {
+    &.section {
+      padding-top: .5em;
+    }
+
+    .column {
+      margin-top: 2em;
+
+      &.sub_nav {
+        margin-top: 0;
+      }
+    }
+
+    .nested_column--stacked {
+      margin-bottom: 1.5em;
+    }
+  }
+}

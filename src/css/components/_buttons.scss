@@ -1,0 +1,154 @@
+/*
+ * Buttons styles.
+ */
+
+@import "../globals";
+@import "../mixins";
+
+// Button
+//
+// Standard button for clicking
+//
+// Markup:
+// <a href="#" class="button {{ modifier_class }}">Button</a>
+// <button class="button {{modifier_class}}">Button Element</button>
+//
+// .button--is_disabled   - Disabled buttons that are not clickable.
+// .button--is_active, :active  - When a button is active or being clicked.
+// .button--is_hovered, :hover  - Styling for when a button is hovered.
+// .button--primary       - Primary color as the background, white as
+//                          foreground.
+// .button--secondary     - White background color, support foreground.
+// .button--white         - White background, primary foreground.
+// .button--sm            - Smallest button size.
+// .button--md            - Medium button size.
+// .button--lg            - Largest button size.
+//
+// Styleguide components.buttons
+.button {
+  @include t-title;
+  @include font-size(1.3);
+  @include rem(margin, 1rem 0);
+  @include user-select(none);
+  background-color: $primary;
+  border: 0;
+  color: $white;
+  display: inline-block;
+  padding: 1.3em 2.0em;
+  text-align: center;
+  text-decoration: none;
+  vertical-align: baseline;
+  white-space: nowrap;
+  zoom: 1;
+
+  &:active {
+    @extend .button--is_active;
+  }
+
+  &:hover {
+    @extend .button--is_hovered;
+  }
+}
+
+.button--is_disabled {
+  cursor: not-allowed;
+  opacity: .4;
+}
+
+.button--is_active {
+  box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.15) inset, 0 -3px 6px 1px rgba(0, 0,
+    0, 0.1) inset
+}
+
+.button--is_hovered {
+  box-shadow: 0 6px 20px 0 rgba(255, 255, 255, 0.11) inset,
+    0 -5px 18px 1px rgba(255, 255, 255, 0.09) inset;
+  text-decoration: none;
+}
+
+.button--sm {
+  @include t-title;
+  @include font-size(1.1);
+  @include rem(margin, 0.8rem 0);
+}
+
+.button--md {
+  @extend .t-title--3;
+}
+
+.button--lg {
+  @include t-title;
+  @include font-size(1.6);
+  @include rem(margin, 0 0 1rem 0);
+}
+
+.button--primary {
+  background-color: $primary;
+  color: $white;
+}
+
+.button--secondary {
+  background-color: $white;
+  color: $primary_support;
+
+  &.button--is_hovered {
+    box-shadow: 0 1px 30px 0px rgba(0, 0, 0, 0.05) inset,
+      0 -3px 4px 1px rgba(255, 255, 255, 0.01) inset;
+    color: darken($primary_support, 7.5%);
+  }
+}
+
+.button--white {
+  background-color: $white;
+  color: $primary_support;
+  fill: $primary_support;
+
+  &.button--is_hovered {
+    box-shadow: 0 1px 30px 0px rgba(0, 0, 0, 0.05) inset,
+      0 -3px 4px 1px rgba(255, 255, 255, 0.01) inset;
+    color: darken($primary, 5%);
+    fill: darken($primary, 5%);
+  }
+}
+
+.button--round {
+  border-radius: 50%;
+  text-align:center;
+  padding: 1.15em;
+  padding-left: 1.5em;
+  padding-right: 1.5em;
+  i {
+    display: block;
+    padding-left: 0.15em;
+    font-size: 2em;
+  }
+}
+
+.button--icon {
+  padding-top: 1.65em;
+  .icon {
+    margin-bottom: -0.2em;
+  }
+  // @TODO
+  span {
+    display: block;
+    margin-bottom: -0.6em;
+  }
+}
+
+.button--close {
+  background: url('../img/i-close.svg') no-repeat;
+  border: 1px solid $white;
+  height: 1.75em;
+  right: 10%;
+  padding: 0;
+  position: absolute;
+  top: 10%;
+  width: 1.75em;
+  @include media($md) {
+    right: 6%;
+  }
+  @include media($sm) {
+    right: 3%;
+  }
+}

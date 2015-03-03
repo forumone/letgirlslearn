@@ -1,0 +1,165 @@
+
+@import "../globals";
+@import "../mixins";
+
+// Main nav
+//
+// The main nav is a horizontal row of links, which collapses to a centered
+// vertical row for smaller screens.
+//
+// Markup:
+// <nav class="main_nav">
+//   <ul class="main_nav__list">
+//     <li class="main_nav__link"><a>Link A</a></li>
+//     <li class="main_nav__link"><a>Link B</a></li>
+//     <li class="main_nav__link"><a>Link C</a></li>
+//   </ul>
+// </nav>
+//
+// Styleguide components.main_nav
+.main_nav {
+  @extend .inline_text--centered;
+  @extend .u-unmarked_list;
+  width: 100%;
+}
+.main_nav--sticky {
+  left: 50%;
+  position: absolute;
+  @include transform(translateX(-50%));
+  top: 43.1em;
+  width: 100%;
+  z-index: $z_index-2;
+
+  .main_nav__link a {
+    color: inherit !important;
+  }
+
+  &:not(.skrollable) {
+    @include transform(none);
+    margin: 0;
+    position: static !important;
+    left: 0;
+    top: 0;
+  }
+
+  @include media($md) {
+
+  }
+}
+
+.main_nav__list {
+  @include span_columns(12);
+  height: 4.6em;
+  margin: 0 auto;
+  text-align: center;
+
+  @include media($sm) {
+    @include span_columns(4);
+    padding-left: 0;
+    margin: 0 auto;
+  }
+}
+
+.section__content.main_nav__list {
+  padding-bottom:0em;
+  padding-top:0.75em;
+}
+
+.main_nav__link {
+  @extend .inline_text__ele--centered;
+  margin: 0 auto;
+  text-align: left;
+  line-height:4em;
+
+  &:after {
+    content: "|";
+    display:inline-block;
+    padding-left:1em;
+    padding-right:1em;
+
+    @include media($sm) {
+      padding-left: .5em;
+      padding-right: .5em;
+    }
+  }
+
+  &:last-child {
+    &:after {
+      display: none;
+    }
+  }
+
+  * {
+    @extend .t-link--gray;
+    text-decoration: none;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+
+  @include media($sm) {
+    @include font-size(1);
+  }
+}
+
+.main_nav__logos--main {
+  text-align: center;
+
+  &.main_nav__logos--main {
+    img {
+      margin-bottom: 2em;
+      margin-top: 0;
+      max-height:50px;
+      width: inherit;
+    }
+  }
+}
+
+.main_nav__logos {
+  @include span_columns(3);
+  right: 0;
+  position: absolute;
+  text-align: right;
+
+  @include media($md) {
+    &:first-child {
+      display: none;
+    }
+    &.main_nav__list {
+      margin-top: 0;
+      padding-top: 0;
+      position:static;
+      text-align:center;
+      width: 100%;
+    }
+  }
+
+  @include media($sm) {
+    &:first-child {
+      display: none;
+    }
+    &.scrollable:first-child {
+      display: block;
+    }
+    &.main_nav__list {
+      margin-top: 0;
+      padding-top: 0;
+      position:static;
+      text-align:center;
+      width: 100%;
+    }
+  }
+
+  img {
+    max-height:50px;
+  }
+
+  .main_nav__link {
+    margin-right: 10px;
+
+    &:after {
+      display: none;
+    }
+  }
+}

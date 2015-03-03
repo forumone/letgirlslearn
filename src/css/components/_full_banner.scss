@@ -1,0 +1,59 @@
+/*
+ * A full width banner with content that sits in its center.
+ */
+
+@import "../globals";
+
+.full_banner {
+  border-top: 0.7em solid;
+  border-bottom: 0.7em solid;
+  margin: 0px -10.3%;
+  padding: 0.5em 10.3%;
+  @extend .u-clearfix;
+}
+
+// Hacky class to fix resizing.
+.full_banner--width {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+}
+
+.full_banner--support {
+  border-bottom: none;
+  border-top: none;
+  background-color: rgba($primary_support, 0.75);
+  color: $white;
+}
+
+.full_banner--neutral {
+  background-color: $neutral_medium;
+  border-color: $neutral_dark !important;
+}
+
+
+.full_banner--rule {
+  border-top: .8em solid;
+  border-bottom: 0;
+  height: .01em;
+  margin-bottom: 3.5em;
+  margin-top: 3.5em;
+  padding: 0;
+
+  & + * {
+    margin-top: 0;
+    padding-top: 0 !important;
+  }
+}
+
+.full_banner--flush {
+  border-bottom: 0;
+
+  & + * {
+    margin-top: 0;
+  }
+}
+
+.full_banner--no_border {
+  border: 0;
+}

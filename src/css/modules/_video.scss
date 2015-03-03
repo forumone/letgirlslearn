@@ -1,0 +1,32 @@
+// Functionality to style responsive videos
+//
+// Styleguide modules.video
+
+$transition_time: 1s;
+
+.video {
+	@include transition(
+		opacity $transition_time linear 0.25s);
+	background: rgba(0,0,0,0.5);
+	height: 100%;
+	left: 0;
+	opacity: 0;
+	padding-bottom: 56.25%; /* 16:9 */
+	padding-top: 2em;
+	position: absolute;
+	top: 0;
+	width: 100%;
+}
+.video iframe {
+	@include transform(translate( -50%, -50%));
+	left: 50%;
+	max-width: 45em;
+	position: absolute;
+	top: 50%;
+	width: 100%;
+}
+
+.video_sibling {
+	@include transition(
+		opacity $transition_time linear);
+}

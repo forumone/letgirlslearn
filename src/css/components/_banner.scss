@@ -1,0 +1,108 @@
+
+// Banner
+//
+// A full width to wrap banner of differnt colors and sizes. This differs from
+// full banner in that it doesn't span the whole width of the viewport. The
+// banner has a top line of a different color.
+//
+// Markup:
+// <div class="banner {{ modifier_class }}">
+//   <h4>Some content in the banner</h4>
+// </div>
+//
+// .banner--primary  - Banner with primary color border and dark neutral
+//   background.
+// .banner--secondary  - Neutral background with secondary border and white
+//   foreground.
+// .banner--support -- Support background with .75 opacity, medium neutral
+//   border and white forground.
+// .banner--neutral_dark  - Deprecated
+// .banner--dark_transparent  - Secondary dark color with transparency on white.
+// .banner--no_line  - A border without the usual top line.
+// .banner--short  - A shorter version of the banner.
+// .banner--sitewide_notification  - A specific banner used on the top of the
+//   site serving as a notification.
+//
+// Styleguide components.banner
+
+// TODO combine some logic in full banner with this.
+@import "../globals";
+
+.banner {
+  padding-top: 0.5em;
+  padding-right: 3em;
+  width: 100%;
+
+  @include media($sm) {
+    padding: 1em;
+  }
+}
+
+.banner .t-blurb--md {
+  margin-bottom:0;
+}
+
+.banner--primary {
+  border-color: $primary;
+  background: $neutral_dark;
+}
+
+.banner--secondary {
+  border-color: $neutral_medium;
+  background-color: $secondary;
+  color: $white;
+}
+
+.banner--support {
+  border-color: $neutral_medium;
+  background-color: rgba($primary_support, 0.75);
+  color: $white;
+}
+
+.banner--neutral_dark {
+  border-color: $neutral_medium;
+  background-color: $gray-2;
+  color: $white;
+}
+
+.banner--dark_transparent {
+  background-color: rgba($secondary_dark, 0.5);
+  color: $white;
+}
+
+.banner--no_line {
+  border-top: none;
+}
+
+.banner--short {
+  padding-bottom: .5em;
+  padding-top: .5em;
+}
+
+.banner--sitewide_notification {
+  padding-left: 1em;
+  padding-right:1em;
+  padding-top: 0.75em;
+  padding-bottom: 0.75em;
+}
+
+.banner--blurb {
+  padding-left: 12em;
+  padding-right: 12em;
+
+  @include media($md) {
+    padding-left: 4em;
+    padding-right: 4em;
+  }
+  @include media($sm) {
+    padding-left: 1em;
+    padding-right: 1em;
+  }
+}
+
+.banner--page {
+  h1 {
+    margin-bottom:0;
+    padding-bottom:0;
+  }
+}

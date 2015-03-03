@@ -1,0 +1,57 @@
+// Block
+//
+// A block with content on left and right side.
+//
+// Styleguide modules.block
+
+.block {
+  @extend .inset--lg;
+
+  .block__side {
+    @include span-columns(4 of 10);
+    @include media($md) {
+      @include span-columns(9 of 9);
+      text-align: center;
+    }
+    @include media($sm) {
+      @include span-columns(4 of 4);
+      padding-left: 1em;
+      padding-right: 1em;
+      margin-top: 2em;
+    }
+
+    * {
+      max-width: 100%;
+    }
+    @include media($sm) {
+      text-align: center;
+    }
+    @include media($sm) {
+      text-align: center;
+    }
+  }
+  .block__content {
+    @include span-columns(6 of 10);
+    margin-right: 0;
+    min-height: 16.2em;
+
+    @include media($md) {
+      @include span-columns(9 of 9);
+      margin-right: 0;
+      min-height: 14em;
+    }
+    @include media($sm) {
+      @include span-columns(4 of 4);
+      margin-top: 2em;
+      padding-left: 1em;
+      padding-right: 1em;
+    }
+    .t-title--2, .t-title--3 {
+      font-weight: $weight-light;
+      margin-bottom: 0;
+    }
+    .t-heading--2 {
+      margin-bottom: 0.1em;
+    }
+  }
+}

@@ -1,0 +1,47 @@
+// Breadcrumbs
+
+.breadcrumbs {
+  $gray: #767676;
+
+  @extend .t-title--4;
+  @include font-size(1.2);
+
+  font-weight: $weight-light;
+  margin: 0 auto;
+  max-width: 45em;
+  min-width: 65em;
+  padding-top: 2.5em;
+  padding-left: 2.5em;
+  padding-right: 2.5em;
+  width: 100%;
+
+  @include media($md) {
+    padding-left: 4em;
+  }
+  @include media($sm) {
+    padding-left: 1em !important;
+  }
+
+  .breadcrumbs__link {
+    @include font-size(1.2);
+    color: $gray;
+    text-decoration: none;
+    -webkit-text-size-adjust: 100%;
+  }
+  a.breadcrumbs__link:hover {
+    text-decoration: underline;
+  }
+  .breadcrumbs__separator {
+    background: url('img/i-arrow-right.svg');
+    color: $gray;
+    display: inline-block;
+    height: 1.2rem;
+    padding-left: 0.6em;
+    vertical-align: sub;
+    width: 2.2rem;
+    @include media($sm) {
+      padding-left: 0em;
+      width: 1rem;
+    }
+  }
+}

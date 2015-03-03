@@ -1,0 +1,298 @@
+// Panel
+//
+// One of the panels with foreground content and a background image
+//
+// Styleguide modules.panel
+
+.skrollr {
+  .panel .panel__background__img {
+    background: transparent !important;
+  }
+}
+
+.panel {
+  border-bottom: .5333333em solid $neutral_light;
+
+  .panel__background {
+    background-position: center;
+    border-top: .5333333em solid $neutral_light;
+    clear: left;
+    width: 100%;
+  }
+  .panel__background__img {
+    height: 100%;
+    width: 100%;
+    z-index: $z_index_0;
+    @include media($md) {
+      background-size: cover !important;
+    }
+    @include media($sm) {
+      background-size: cover !important;
+    }
+
+    &.sm--r {
+      @include media($sm) {
+        background-position: 40% 0 !important;
+      }
+    }
+    &.sm--c {
+      @include media($sm) {
+        background-position: 20% 0 !important;
+      }
+    }
+  }
+  .panel__content {
+    @extend .u-clearfix;
+    background: $white;
+    clear: left;
+  }
+
+  .panel__background--right {
+    .panel__background__img {
+      background-position: right;
+    }
+  }
+  .panel__background--left {
+    .panel__background__img {
+      background-position: left;
+    }
+  }
+
+  &.panel--a {
+    position: relative;
+
+    .panel__background {
+      height: 70.1333333em;
+      @include media($md) {
+        height: 64em;
+      }
+      @include media($sm) {
+        height: 30em;
+      }
+    }
+
+    .panel__background__img:not(.skrollable) {
+      background-size: cover !important;
+      background-position: 2% 0%;
+
+      @include media($sm) {
+        background-position: 70% 0% !important;
+      }
+    }
+
+    @include media($md) {
+      .panel__background__img {
+        background-position: 18% 0%;
+      }
+    }
+    @include media($sm) {
+      .panel__background__img {
+        background-size: cover !important;
+        background-position: 40% 0%;
+      }
+    }
+
+    .panel__content {
+      @include span-columns(6);
+      @include shift(1);
+      padding: 1.66666em;
+      position: absolute;
+      top: 10%;
+      z-index: $z_index-1;
+      img {
+        max-width: 100%;
+      }
+
+      @include media($md) {
+        @include span-columns(8);
+        @include shift(1);
+        margin-left: 2%;
+        top: 7%;
+        width: 80%;
+      }
+      @include media($sm) {
+        @include span-columns(4);
+        @include shift(0);
+        margin-top: 2em;
+        padding: 1em;
+        position: static;
+        top:0;
+      }
+    }
+  }
+  &.panel--b {
+    position: relative;
+
+    .panel__background {
+      height: 45em;
+      @include media($md) {
+        height: 38em;
+      }
+      @include media($sm) {
+        height: 22em;
+      }
+
+      @include media($md-height) {
+        height: 39em;
+      }
+      @include media($sm-height) {
+        height: 31em;
+      }
+    }
+    .panel__content {
+      padding-top: 3.66em;
+      padding-bottom: 2em;
+      height: 100%;
+      width: 100%;
+      @include media($sm) {
+        padding-top: 2em;
+        padding-bottom: 3em;
+      }
+    }
+  }
+}
+
+.panel__story {
+  p {
+    max-width: 45em;
+    margin:0 auto;
+    font-size:1.2em;
+    padding-bottom:1.75em;
+    padding-left:2.5em;
+    padding-right:2.5em;
+    span {
+      font-family: Archer, Archer SSm A, Archer SSm B;
+      color: $primary;
+      //font-weight: 600;
+      font-size: 1.15em;
+      display:block;
+    }
+
+    @include media($sm) {
+      padding-left: 1.5em;
+      padding-right: 1.5em;
+    }
+  }
+  img {
+    margin-top: 2.5em;
+    margin-bottom:3em;
+    width: 100%;
+  }
+
+  .bi-image {
+    max-width: 45em;
+    margin:0 auto;
+    overflow:hidden;
+    @extend .u-clearfix;
+    img {
+      width:50%;
+      float:left;
+    }
+  }
+
+  .tri-image {
+    max-width:100%;
+    overflow:hidden;
+    @extend .u-clearfix;
+
+    .tri-image_one, .tri-image_three {
+      display:none;
+    }
+    @media only screen and (min-width: 1117px) {
+      img {
+        max-height: 300px;
+        width:auto;
+        float:left;
+      }
+      .tri-image_one, .tri-image_three {
+        display:block;
+      }
+    }
+  }
+}
+
+.breadcrumbs + .panel__story.panel__content {
+  padding-top: 1.4em;
+}
+
+@include media($md) {
+  .main_nav--sticky.skrollable ~ .wrap--top {
+    margin-top: 7em;
+  }
+}
+
+.wrap--top {
+  margin-top: 4.5em;
+
+  @include media($md) {
+    margin-top: 0;
+  }
+  @include media($sm) {
+    margin-top: 0;
+  }
+}
+
+.parallax {
+  @include outer-container;
+  height: 100%;
+  left: 50%;
+  // margin-top: 28em;
+  overflow: hidden;
+  position: fixed;
+  top: -100%;
+  transform: translateX(-50%);
+  width: 100%;
+
+  &:first-child {
+    .parallax__bg {
+    }
+  }
+
+  &:not(.skrollable) {
+    display: none;
+  }
+
+  &.parallax--a {
+    height: 140%;
+
+  }
+
+  &.no-skroll {
+    display: none;
+  }
+
+  .parallax__bg {
+    display: block;
+    height: 100%;
+    top: 0;
+    position: absolute;
+
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 100%;
+
+    @include media($md-height) {
+      background-position: 0 10%;
+    }
+
+    // Hack
+    @include media(min-width 901px max-width 1100px, 12) {
+      background-size: 116%;
+      background-position: 0;
+    }
+
+    @include media($md) {
+      background-size: 122%;
+    }
+    @include media($sm) {
+      background-size: cover;
+    }
+  }
+  .parallax--adjust {
+     height: 120%;
+     background-position: 0 25%;
+  }
+}

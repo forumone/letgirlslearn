@@ -1,0 +1,31 @@
+<a href="#" class="button button--share js-shareOn">
+  <span class="share__link_text">share this page</span>
+</a>
+<div class="share__box">
+  <a href="https://www.facebook.com/sharer/sharer.php?u={{ site.basedomain | cgi_escape }}{{ page.url | cgi_escape }}"
+    target="_blank"
+    class="icon--img share__link"
+    title="Share page on Facebook">
+    <img src="img/i-facebook.svg" />
+    <span class="share__text">Facebook</span>
+  </a>
+  <a href="https://twitter.com/home?status={{ site.twitter_prompt | cgi_escape }}"
+    target="_blank"
+    class="icon--img share__link"
+    title="Share page on Twitter">
+    <img src="img/i-twitter.svg" />
+    <span class="share__text">Twitter</span>
+  </a>
+  <a href="mailto:?subject={{ site.email_subject | uri_escape }}&body={{ site.email_body | uri_escape }}"
+    class="icon--img share__link"
+    title="Share through email">
+    <img src="img/i-email.svg" />
+    <span class="share__text">Email</span>
+  </a>
+<a href="#"
+  class="share__close t-link--white">
+  <span class="share__text js-shareOff">Close
+    <img class="icon" src="img/i_arrow_up.svg" style="margin-left: 6px;" />
+  </span>
+</a>
+</div>

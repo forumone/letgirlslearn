@@ -1,0 +1,141 @@
+---
+layout: parallax
+title: Let Girls Learn
+subtitle: The Eleven Countries
+banner_image: countries_hero.jpg
+description: "In the first year of the Let Girls Learn collaboration, Peace Corps will initially target 11 countries where we can make a real difference."
+---
+
+{% include static_page_header.html %}
+
+{% for country in site.data.countries %}
+  <!-- {{ country.name | downcase | replace:' ','-' }}" -->
+  <!-- {{ prev_country }}" -->
+  <div class="parallax"
+    {% if forloop.first %}
+    data-anchor-target="#first + .panel__background"
+    {% else %}
+    data-anchor-target="#{{ prev_country }} + .panel__background"
+    {% endif %}
+		data-bottom-top="transform:translate3d(-50%, 200%, 0px)"
+		data-top-bottom="transform:translate3d(-50%, 0%, 0px)"
+    >
+    <div class="parallax__bg"
+      style="background-image:url(img/img_country_bg_{{ country.name | downcase | replace:' ','-' }}.jpg);
+      "
+      {% if forloop.first %}
+      data-anchor-target="#first + .panel__background"
+      {% else %}
+      data-anchor-target="#{{ prev_country }} + .panel__background"
+      {% endif %}
+      data-bottom-top="transform:translate3d(0, -28%, 0px)"
+      data-top-bottom="transform:translate3d(0, 28%, 0px)"
+    >
+    </div>
+  </div>
+  {% capture prev_country  %}{{ country.name | downcase | replace:' ','-' }}{% endcapture %}
+{% endfor %}
+
+<!-- {{ country.name }} -->
+<div class="wrap wrap--white">
+  <section class="panel panel--b">
+    <div class="anchor_linker" id="pillar1"></div>
+    <article class="panel__content" style="padding-top:0;" id="first">
+      <div class="block">
+      {% include breadcrumbs.html breadcrumb_title='The Eleven Countries' outside_block='True' %}
+        <aside class="block__side">
+          <img src="img/maps/all.jpg" class="map__image" alt="Map of the World" />
+        </aside>
+        <article class="block__content">
+          <h2 class="t-heading--2">The Eleven Countries</h2>
+          <p>
+            In the first year of the Let Girls Learn collaboration, Peace Corps will initially target 11 countries where we can make a real difference: {% for country in site.data.countries %}{% if forloop.last %}and {% endif %}{{ country.name }}{% if forloop.last %}{% else %}, {% endif %}{% endfor %}. Browse below for more information about the obstacles to education girls face in these countries.
+          </p>
+        </article>
+        <div style="clear: both"></div>
+        {% for next_country in site.data.countries %}
+          {% if forloop.index == 1 %}
+          <div class="anchor">
+            <a href="#{{ next_country.name | downcase | replace:' ','-' }}" class="anchor__icon js-anchorLink" title="{{ next_country.name }}">
+              <img src="img/i-down_arrow.svg" alt="Down arrow icon" />
+            </a>
+            <div class="anchor__text">
+              <a href="#{{ next_country.name | downcase | replace:' ','-' }}" class="anchor__link js-anchorLink" title="{{ next_country.name }}">
+                <h5 class="t-title--4">First Country</h5>
+                <span class="t-body--sm">{{ next_country.name }}</span>
+              </a>
+            </div>
+          </div>
+          {% endif %}
+        {% endfor %}
+      </div>
+    </article>
+    <div class="panel__background">
+    {% for next_country in site.data.countries %}
+      {% if forloop.first %}
+        <div class="panel__background__img"
+          style="background-image:url(img/img_country_bg_{{ next_country.name | downcase | replace:' ','-' }}.jpg);
+            ">
+        </div>
+      {% endif %}
+    {% endfor %}
+    </div>
+  </section>
+</div>
+<!-- end panel -->
+
+  {% for country in site.data.countries %}
+
+  <!-- {{ country.name }} -->
+  <div class="wrap wrap--white">
+    <section class="panel panel--b">
+      <div class="anchor_linker" id="pillar1"></div>
+      <article class="panel__content"
+        id="{{ country.name | downcase | replace:' ','-' }}">
+        <div class="block">
+          <aside class="block__side">
+            <img src="img/maps/{{ country.name | downcase | replace:' ','-' }}.jpg" class="map__image" alt="Map of {{ country.name}}" />
+          </aside>
+          <article class="block__content">
+            <h2 class="t-heading--2">{{ country.name }}</h2>
+            <p>
+              {{ country.description | replace:"’", "'" | replace:"—", "-" | replace:'“', '"' | replace: '”', '"' }}
+            </p>
+          </article>
+          <div style="clear: both"></div>
+          {% assign current_index = forloop.index %}
+          {% for next_country in site.data.countries offset:1 %}
+            {% if forloop.index == current_index %}
+            <div class="anchor">
+              <a href="#{{ next_country.name | downcase | replace:' ','-' }}" class="anchor__icon js-anchorLink" title="{{ next_country.name }}">
+                <img src="img/i-down_arrow.svg" alt="Down arrow icon" />
+              </a>
+              <div class="anchor__text">
+                <a href="#{{ next_country.name | downcase | replace:' ','-' }}" class="anchor__link js-anchorLink" title="{{ next_country.name }}">
+                  <h5 class="t-title--4">Next Country</h5>
+                  <span class="t-body--sm">{{ next_country.name }}</span>
+                </a>
+              </div>
+            </div>
+            {% endif %}
+          {% endfor %}
+        </div>
+      </article>
+      {% if forloop.last %}
+      {% else %}
+      <div class="panel__background">
+        {% for next_country in site.data.countries offset:1 %}
+          {% if forloop.index == current_index %}
+            <div class="panel__background__img"
+              style="background-image:url(img/img_country_bg_{{ next_country.name | downcase | replace:' ','-' }}.jpg);
+                ">
+            </div>
+          {% endif %}
+        {% endfor %}
+      </div>
+      {% endif %}
+    </section>
+  </div>
+  <!-- end panel -->
+
+  {% endfor %}

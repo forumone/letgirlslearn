@@ -1,0 +1,18 @@
+# Site settings
+title: Let Girls Learn
+baseurl: "/" # the subpath of your site, e.g. /blog/
+
+basedomain: "https://letgirlslearn.peacecorps.gov"
+
+# Social Media Settings
+twitter_prompt: "Around the world, 62 million girls aren't in school. Millions more are fighting to stay there. Join @peacecorps to #LetGirlsLearn."
+facebook_prompt: "Education is one of the most critical areas of empowerment for girls, and it shouldn't be a luxury. When girls are educated, they lead healthier and more productive lives. They become better citizens, parents and breadwinners. What does girls' empowerment mean to you? Leave a comment below and join the movement to #LetGirlsLearn."
+email_subject: "Let Girls Learn"
+email_body: "Education is one of the most critical areas of empowerment for girls, and it shouldn’t be a luxury. When girls are educated, they lead healthier and more productive lives. They become better citizens, parents and breadwinners. First Lady Michelle Obama and the Peace Corps have formed a powerful collaboration to expand access to education for girls around the world. Check out letgirlslearn.peacecorps.gov to learn more and join the movement. "
+
+default_description: "As part of the U.S. government's commitment to Let Girls Learn, First Lady Michelle Obama and the Peace Corps have formed a powerful collaboration to expand access to education for adolescent girls around the world."
+
+# Build settings
+markdown: kramdown
+source: site
+destination: rendered

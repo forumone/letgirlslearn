@@ -1,0 +1,428 @@
+// Type
+//
+// Typography across the site.
+//
+// Styleguide base.type
+
+@import "globals";
+@import "mixins";
+
+$leading-xsm: 1.2;
+$leading-sm: 1.3;
+$leading-md: 1.6;
+$leading-body: 1.8;
+$leading-lg: 1.8;
+$leading-xlg: 2;
+
+$weight-light: 300;
+$weight-book: 400;
+$weight-medium: 500;
+$weight-semibold: 600;
+$weight-bold: 700;
+
+html {
+  font-size: 62.5%;
+}
+body {
+  @include font-size(1.5);
+  color: $primary;
+  font-family: 'Lato', 'Verdana', sans-serif;
+  font-weight: $weight-light;
+  line-height: $leading-md;
+  text-transform: none;
+  -webkit-font-smoothing: antialiased;
+}
+
+// Type
+//
+// Simple typography extensions for use across the site
+//
+// Markup:
+// <p class="{{modifier_class}}">Some text here</p>
+//
+// .t--caps  - Uppercase capitalization.
+// .t--primary  - Color text in primary color.
+// .t--secondary  - Color text in secondary color.
+// .t--white  - Color text in white color.
+// .t--error  - Text color to use in case of an error.
+// .t--gray  - Gray color.
+// .t--gray--2  - Darker gray color.
+// .t--black  - Color text in black color.
+//
+// Styleguide base.type.type
+@mixin t--caps {
+  letter-spacing: .09em;
+  text-transform: uppercase;
+}
+.t--caps {
+  @include t--caps;
+}
+
+.t--primary {
+  color: $primary;
+}
+
+.t--secondary {
+  color: $secondary;
+}
+
+.t--white {
+  color: $white;
+}
+
+.t--error {
+  color: $error;
+}
+
+.t--gray {
+  color: $gray-1;
+}
+.t--gray--2 {
+  color: $gray-2;
+  text-decoration-color: $gray-2;
+}
+
+.t--black {
+  color: $black;
+}
+
+// Heading
+//
+// Headings are in the main content, serving as titles to body text.
+//
+// Markup:
+// <h1 class="{{ modifier_class }}">The Heading</h1>
+//
+// .t-heading--1  - First and largest heading size.
+// .t-heading--2  - Heading 2.
+// .t-heading--3  - Heading 3.
+// .t-heading--4  - Heading 4.
+// .t-heading--stylized  - A "stylized" heading, or one where the positioning
+//   and sizing of it are maniuplated purposely for a specific layout.
+//
+// Styleguide base.type.heading
+.t-heading {
+  font-family: Archer, Archer SSm A, Archer SSm B, sans-serif;
+  font-weight: $weight-light;
+  line-height: $leading-sm;
+  text-decoration: none;
+}
+.t-heading--1 {
+  @include font-size(4.4);
+  margin-top: 0;
+  @include rem(margin, 0 0 .9rem 0);
+}
+.t-heading--2 {
+  @include font-size(2.7);
+  margin-top: 0;
+  @include rem(margin, 0 0 .9rem 0);
+}
+.t-heading--3 {
+  @include font-size(2.1);
+  @include rem(margin, 0 0 .9rem 0);
+  margin-top: 0;
+}
+.t-heading--4 {
+  @include font-size(1.8);
+  @include rem(margin, 0 0 .9rem 0);
+  margin-top: 0;
+}
+h1 {
+  @extend .t-heading--1;
+}
+h2 {
+  @extend .t-heading--2;
+}
+h3 {
+  @extend .t-heading--3;
+}
+h4 {
+  @extend .t-heading--4;
+}
+h1, h2, h3, h4, h5, h6 {
+  @extend .t-heading;
+}
+
+h4 + h3 {
+  margin-top: 0;
+}
+
+.t-heading--stylized {
+  display: inline-block;
+  line-height: 1.25;
+}
+
+// Body
+//
+// Body text, purposed for readibilty of large amounts of content.
+//
+// Markup:
+// <p class="{{ modifier_class }}">The Heading</p>
+//
+// .t-body--lg  - Largest set of type, used for full-page articles of content.
+// .t-body--md  - Standard set of body type, used in most places across site.
+// .t-body--sm  - Small set of type for when things have to be smaller then
+//   body, used as links in the footer amoung other things.
+// .t-body--xms  - For very small text, should not be used for important text.
+//    An example use could be small copyright at bottom of a page.
+//
+// Styleguide base.type.body
+.t-body--lg {
+  @include font-size(1.8);
+  @include rem(margin, 2.4rem 0);
+  line-height: $leading-body;
+  p {
+    @include font-size(1.8);
+    @include rem(margin, 2.4rem 0);
+    line-height: $leading-body;
+  }
+}
+.t-body--md {
+  @include font-size(1.6);
+  @include rem(margin, 1.2rem 0);
+  line-height: $leading-md;
+}
+.t-body--sm {
+  @include font-size(1.4);
+  @include rem(margin, 1rem 0);
+  line-height: $leading-md;
+}
+.t-body--xsm {
+  @include font-size(1.2);
+  @include rem(margin, .9rem 0);
+  line-height: $leading-xsm;
+}
+p, button {
+  @extend .t-body--md;
+}
+p {
+  color: $black;
+  margin: 0;
+}
+// For every p that follows a p, add top margin.
+p + p {
+  margin-top: 1em;
+}
+
+// Title
+//
+// Title styles are for titles not associated with content. They are differently
+// styled the headings.
+//
+// Markup:
+// <h1 class="{{ modifier_class }}">The Title</h1>
+//
+// .t-title--1  - Largest title size, title 1.
+// .t-title--2  - Title 2.
+// .t-title--3  - Title 3.
+// .t-title--4  - Title 4.
+// .t-title--5  - Title 5.
+// .t-title--6  - Title 6.
+//
+// Styleguide base.type.title
+@mixin t-title {
+  @include t--caps;
+  font-family: 'Lato', 'Verdana', sans-serif;
+  font-weight: $weight-medium;
+}
+.t-title {
+  @include t-title;
+}
+.t-title--1 {
+  @include t-title;
+  @include font-size(2.3);
+  @include rem(margin, 0 0 1.5rem 0);
+}
+.t-title--2 {
+  @include t-title;
+  @include font-size(1.6);
+  @include rem(margin, 0 0 1rem 0);
+
+  @include media($md) {
+    @include font-size(1.5);
+  }
+
+  @include media($sm) {
+    @include font-size(1.5);
+  }
+}
+.t-title--3 {
+  @include t-title;
+  @include font-size(1.3);
+  @include rem(margin, 1rem 0);
+
+  @include media($md) {
+    @include font-size(1.3);
+  }
+
+  @include media($sm) {
+    @include font-size(1.3);
+  }
+}
+.t-title--4 {
+  @include t-title;
+  @include font-size(1.1);
+  @include rem(margin, 0.8rem 0);
+}
+.t-title--5 {
+  @include t-title;
+  @include font-size(0.9);
+  @include rem(margin, 0.8rem 0);
+}
+.t-title--6 {
+  @include t-title;
+  @include font-size(0.7);
+  @include rem(margin, 0.4rem 0);
+}
+
+
+// Blurb
+//
+// Blurbs are large pieces of readable (not uppercased) text that call out
+// bits of important information.
+//
+// Markup:
+// <h2 class="{{ modifier_class }}">A blurb of text about something</p>
+//
+// .t-blurb--lg  - Largest blurb style.
+// .t-blurb--md  - Middle blurb style, for most use cases.
+//
+// Styleguide base.type.blurb
+ @mixin t-blurb {
+  font-family: Archer, Archer SSm A, Archer SSm B, sans-serif;
+  font-weight: $weight-light;
+  line-height: $leading-lg;
+ }
+.t-blurb--lg {
+  @include t-blurb;
+  @include font-size(3.6);
+  @include rem(margin, 2.5rem 0);
+  font-weight: $weight-light;
+  line-height: 1.7;
+}
+.t-blurb--md {
+  @include t-blurb;
+  @include font-size(2.6);
+  @include rem(margin, 2rem 0);
+  line-height: 1.5;
+
+  @include media($md) {
+    @include font-size(2.5);
+  }
+
+  @include media($sm) {
+    @include font-size(2.2);
+    margin-top: 0;
+  }
+}
+.t-blurb + .t-blurb {
+  margin-top: -2.5rem;
+  @include rem(margin-top, -2rem);
+}
+
+
+// Icon
+//
+// Icon is for text that goes along with an icon
+//
+// Markup:
+// <span class="t-icon">A piece of text next to an icon</span>
+//
+// Styleguide base.type.icon
+.t-icon {
+  @include t--caps;
+  @include font-size(1.05);
+  font-weight: $weight-medium;
+  color: $gray-2;
+}
+
+// Single-nav
+//
+// Single-nav are single navigational elements, such as links to more content.
+//
+// Markup:
+// <a class="t-single_nav">Go to here</a>
+//
+// Styleguide base.type.single_nav
+.t-single_nav {
+  display: block;
+  margin: 1em 0;
+  text-decoration: none;
+}
+
+
+// Link
+//
+// Generic link styles.
+//
+// Markup:
+// <span class="t-link {{ modifier_class }}">The link</a>
+//
+// .t-link--gray  - Dark gray links.
+// .t-link--white  - White color links.
+//
+// Styleguide base.type.link
+.t-link {
+  color: $primary;
+  text-decoration: none;
+
+  &:visited {
+  }
+  &:hover {
+    text-decoration: underline;
+  }
+  &:active {
+  }
+}
+.t-link--gray {
+  color: $gray-2;
+
+  &:visited {
+    color: lighten($gray-2, 15%);
+  }
+  &:hover {
+    color: $gray-2;
+  }
+  &:active {
+    color: lighten($primary, 10%);
+  }
+}
+.t-link--white {
+  color: $white;
+
+  &:active {
+    color: darken($white, 5%);
+  }
+}
+.t-link--no_underline {
+  text-decoration: none;
+}
+
+a {
+  @extend .t-link;
+}
+.t-title--1 a, .t-title--2 a, .t-title--3 a, .t-title--4 a, .t-title--5 a {
+  text-decoration: none;
+}
+
+// Util
+//
+// General utilities related to typography
+//
+// Markup:
+// <span class="{{ modifier_class }}">Some text</a>
+//
+// .t--light  - Light weight font.
+// .t--bold  - Bold weight font.
+//
+// Styleguide base.type.util
+.t--light {
+  font-weight: $weight-light;
+}
+.t--bold {
+  font-weight: $weight-bold;
+}
+
+.read_more_link svg {
+  height: 1.2rem;
+}

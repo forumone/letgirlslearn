@@ -1,0 +1,76 @@
+/*
+ * Sub Nav
+ *
+ * A sub inline navigation separate from the Main Nav
+ */
+
+@import "../globals";
+
+// Sub Nav
+//
+// A sub inline navigation separate from the Main Nav
+//
+// Markup:
+// <nav class="sub_nav {{ modifier_class }}">
+//   <ul class="u-unmarked_list">
+//     <li class="sub_nav__link"><a>Link A</a></li>
+//     <li class="sub_nav__link"><a>Link B</a></li>
+//     <li class="sub_nav__link"><a>Link C</a></li>
+//   </ul>
+// </nav>
+//
+// .sub_nav--vertical  - A vertical sub nav, with links on top another.
+// .sub_nav--horizontal  - Links side by side.
+// .sub_nav__link--condensed  - Less line spacing in the subnav.
+//
+// Styleguide components.subnav
+.sub_nav {
+  color: $gray-2;
+
+  a {
+    color: $gray-2;
+    text-decoration: none;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+
+}
+.sub_nav__link {
+  @extend .t-body--sm;
+}
+
+.sub_nav--vertical {
+  .sub_nav__link {
+    margin-top: .5em;
+    margin-bottom: .5em;
+  }
+}
+
+.sub_nav--horizontal {
+  .sub_nav__link {
+    display: inline-block;
+    margin-right: 1em;
+  }
+}
+
+.sub_nav__link--condensed {
+  line-height: 1.3;
+}
+
+.sub_nav__link--horizontal {
+  margin-left: 7%;
+
+  * {
+    text-decoration: none;
+  }
+
+  @include media($md) {
+    margin-left: 5%;
+  }
+
+  *[aria-selected=true] {
+    text-decoration: underline;
+  }
+}

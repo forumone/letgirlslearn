@@ -1,0 +1,29 @@
+// Top Image
+//
+// An image, full width or full wrap, at the top of the site.
+//
+// Styleguide modules.top_image
+
+.top_image {
+  @extend .full_width;
+  background-size: cover;
+  background-position: center;
+  border-bottom: $neutral_light solid .5333333em;
+  height: 42.66666em;
+  position: relative;
+}
+
+.top_image--sm {
+  height: 32em;
+
+  @include media($md) {
+    height: 28em;
+  }
+  @include media($sm) {
+    height: 24em;
+  }
+}
+
+.top_image--bordered {
+  border-bottom: .5333333em solid $neutral_light;
+}
