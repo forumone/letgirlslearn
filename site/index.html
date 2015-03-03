@@ -344,7 +344,7 @@ description: "As part of the U.S. government's commitment to Let Girls Learn, Fi
             <p>
               Across the globe, Peace Corps Volunteers empower women and girls during their service. Those same women and girls inspire Peace Corps Volunteers with their strength and perseverance. Show your support by clicking the buttons below. Pledge your support or share your story or photo with #LetGirlsLearn.
            </p>
-           <a class="button button--sm" href="https://www.facebook.com/sharer/sharer.php?u={{ site.basedomain }}" target="_blank">
+           <a class="button button--sm" href="https://www.facebook.com/sharer/sharer.php?u={{ site.basedomain | cgi_escape }}{{ page.url | cgi_escape }}" target="_blank">
               Share on Facebook</a>
             <a class="button button--sm" href="https://twitter.com/home?status={{ site.twitter_prompt | cgi_escape }}" target="_blank">
               Share on Twitter</a>
