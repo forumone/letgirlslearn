@@ -9,4 +9,4 @@ staging:
 	s3cmd put  --acl-public --exclude-from .s3ignore -r rendered/ $(staging_url)
 
 production:
-	s3cmd put  --acl-public --add-header="Cache-Control:max-age=86400" --exclude-from .s3ignore -r rendered/ $(production_url)
+	s3cmd put  --acl-public --add-header="Cache-Control:max-age=600" --exclude-from .s3ignore -r rendered/ $(production_url)
