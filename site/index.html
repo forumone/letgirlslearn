@@ -87,8 +87,13 @@ url: index.html
         <img src="img/logo-letgirlslearn.png" alt="Let Girls Learn"
           width="146" height="122" />
       </a>
-      <div class="share js-share corner corner--tr">
-        {% include social_share.html %}
+      <div style="z-index: 300;" class="corner corner--tr">
+        <div class="subscribe js-subscribe">
+          {% include subscribe.html %}
+        </div>
+        <div class="share js-share">
+          {% include social_share.html %}
+        </div>
       </div>
       <div class="banner banner--support banner--no_line banner--blurb
           u-clearl u-align_c" style="padding-bottom: 0; max-height: 10.6em;">

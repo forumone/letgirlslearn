@@ -16,8 +16,13 @@
           <div class="column--third">
 
           </div>
-          <div class="share share--transparent js-share corner corner--tr">
-            {% include social_share.html %}
+          <div style="z-index: 300;" class="corner corner--tr">
+            <div class="subscribe js-subscribe">
+              {% include subscribe.html %}
+            </div>
+            <div class="share js-share">
+              {% include social_share.html %}
+            </div>
           </div>
         </nav>
       </div>

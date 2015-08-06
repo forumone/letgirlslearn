@@ -207,8 +207,28 @@ this project!
           <div class="column--third">
 
           </div>
-          <div class="share share--transparent js-share corner corner--tr">
-            <a href="#" class="button button--share js-shareOn">
+          <div style="z-index: 300;" class="corner corner--tr">
+            <div class="subscribe js-subscribe">
+              <a href="#" class="button button--subscribe js-subscribeOn">
+  <span class="subscribe__link_text">subscribe</span>
+</a>
+<div class="subscribe__box">
+    <span class="subscribe__text">
+      Subscribe to receive the latest<br/> Let Girls Learn news and<br/> opportunities in your inbox.<br/>
+      <center><a class="button" href="">
+               <span class="subscribe__link_text">subscribe</span></a></center>
+    </span>
+<a href="#"
+  class="subscribe__close t-link--white">
+  <span class="subscribe__text js-subscribeOff">Close
+    <img class="icon" src="img/i_arrow_up.svg" style="margin-left: 6px;" />
+  </span>
+</a>
+</div>
+
+            </div>
+            <div class="share js-share">
+              <a href="#" class="button button--share js-shareOn">
   <span class="share__link_text">share this page</span>
 </a>
 <div class="share__box">
@@ -240,6 +260,7 @@ this project!
 </a>
 </div>
 
+            </div>
           </div>
         </nav>
       </div>

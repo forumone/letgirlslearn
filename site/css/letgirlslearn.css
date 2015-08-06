@@ -377,9 +377,9 @@ p + p {
   .t-link--gray:active, .main_nav__link :active {
     color: #cb2a2b; }
 
-.t-link--white, .share .share__text {
+.t-link--white, .share .share__text, .subscribe .subscribe__text {
   color: #ffffff; }
-  .t-link--white:active, .share .share__text:active {
+  .t-link--white:active, .share .share__text:active, .subscribe .subscribe__text:active {
     color: #f2f2f2; }
 
 .t-link--no_underline {
@@ -1591,6 +1591,7 @@ footer .nested_column--stacked {
       margin-left: 0; }
   .header .header__title {
     margin: 0 auto;
+    padding-top: 18px;
     min-height: 5.5em;
     padding-bottom: 0.5em;
     text-align: center;
@@ -1900,7 +1901,9 @@ footer .nested_column--stacked {
     background-position: 0 25%; }
 
 .share {
-  z-index: 300; }
+  z-index: 300;
+  float: left;
+  margin-left: 8px; }
   .share .share__box {
     -webkit-transition: height 0.65s cubic-bezier(0.645, 0.045, 0.355, 1), width 0.65s cubic-bezier(0.645, 0.045, 0.355, 1), background 0.65s cubic-bezier(0.645, 0.045, 0.355, 1);
     -moz-transition: height 0.65s cubic-bezier(0.645, 0.045, 0.355, 1), width 0.65s cubic-bezier(0.645, 0.045, 0.355, 1), background 0.65s cubic-bezier(0.645, 0.045, 0.355, 1);
@@ -1949,18 +1952,9 @@ footer .nested_column--stacked {
       line-height: 2.75em; }
     @media screen and (min-width: 0px) and (max-width: 499px)  {
       .share .button {
-        width: 3.5em; }
-        .share .button:after {
-          -webkit-transition: opacity 0.2s linear 0.25s;
-          -moz-transition: opacity 0.2s linear 0.25s;
-          transition: opacity 0.2s linear 0.25s;
-          top: 7px;
-          background: url('../img/i-share.svg') no-repeat;
-          content: ' ';
-          height: 3em;
-          width: 3em;
-          position: absolute;
-          left: 8px; }
+        width: 3.5em;
+        background: url('../img/i-share.svg') no-repeat;
+        background-position: center; }
         .share .button .share__link_text {
           -webkit-transition: opacity 0.2s linear 0.45s;
           -moz-transition: opacity 0.2s linear 0.45s;
@@ -1994,6 +1988,119 @@ footer .nested_column--stacked {
     @media screen and (min-width: 0px) and (max-width: 499px)  {
       .share.is_active .share__box {
         width: 8.3em; } }
+
+.subscribe {
+  z-index: 300;
+  float: left; }
+  .subscribe .subscribe__box {
+    -webkit-transition: height 0.65s cubic-bezier(0.645, 0.045, 0.355, 1), width 0.65s cubic-bezier(0.645, 0.045, 0.355, 1), background 0.65s cubic-bezier(0.645, 0.045, 0.355, 1);
+    -moz-transition: height 0.65s cubic-bezier(0.645, 0.045, 0.355, 1), width 0.65s cubic-bezier(0.645, 0.045, 0.355, 1), background 0.65s cubic-bezier(0.645, 0.045, 0.355, 1);
+    transition: height 0.65s cubic-bezier(0.645, 0.045, 0.355, 1), width 0.65s cubic-bezier(0.645, 0.045, 0.355, 1), background 0.65s cubic-bezier(0.645, 0.045, 0.355, 1);
+    background: rgba(0, 0, 0, 0.1);
+    border-left: 1px solid #ffffff;
+    border-right: 1px solid #ffffff;
+    border-bottom: 1px solid #ffffff;
+    border-top: 1px solid #ffffff;
+    border-top-width: 0;
+    height: 0;
+    margin-top: 0;
+    overflow: hidden;
+    padding: 0;
+    text-align: center; }
+    @media screen and (min-width: 0px) and (max-width: 499px)  {
+      .subscribe .subscribe__box {
+        width: 2.3em; } }
+    .subscribe .subscribe__box .button {
+      font-size: 10px;
+      font-size: 1rem;
+      -webkit-transition: width 0.65s cubic-bezier(0.645, 0.045, 0.355, 1), background 0.65s cubic-bezier(0.645, 0.045, 0.355, 1);
+      -moz-transition: width 0.65s cubic-bezier(0.645, 0.045, 0.355, 1), background 0.65s cubic-bezier(0.645, 0.045, 0.355, 1);
+      transition: width 0.65s cubic-bezier(0.645, 0.045, 0.355, 1), background 0.65s cubic-bezier(0.645, 0.045, 0.355, 1);
+      background: rgba(201, 63, 22, 0.75);
+      border: none;
+      display: block;
+      font-weight: 300;
+      margin: 0;
+      margin-top: 5px;
+      min-height: 3em;
+      overflow: hidden;
+      padding: 0;
+      width: 10em; }
+      .subscribe .subscribe__box .button .subscribe__link_text {
+        font-weight: 500;
+        line-height: 2.75em; }
+  .subscribe.subscribe--transparent .button, .subscribe.subscribe--transparent .subscribe__box {
+    -webkit-transition: height 0.65s cubic-bezier(0.645, 0.045, 0.355, 1), width 0.65s cubic-bezier(0.645, 0.045, 0.355, 1), background 0.65s cubic-bezier(0.645, 0.045, 0.355, 1);
+    -moz-transition: height 0.65s cubic-bezier(0.645, 0.045, 0.355, 1), width 0.65s cubic-bezier(0.645, 0.045, 0.355, 1), background 0.65s cubic-bezier(0.645, 0.045, 0.355, 1);
+    transition: height 0.65s cubic-bezier(0.645, 0.045, 0.355, 1), width 0.65s cubic-bezier(0.645, 0.045, 0.355, 1), background 0.65s cubic-bezier(0.645, 0.045, 0.355, 1);
+    background: transparent; }
+  .subscribe.subscribe--transparent .button:hover {
+    box-shadow: 0 6px 20px 0 rgba(0, 0, 0, 0.14) inset; }
+  .subscribe .button {
+    font-size: 10px;
+    font-size: 1rem;
+    -webkit-transition: width 0.65s cubic-bezier(0.645, 0.045, 0.355, 1), background 0.65s cubic-bezier(0.645, 0.045, 0.355, 1);
+    -moz-transition: width 0.65s cubic-bezier(0.645, 0.045, 0.355, 1), background 0.65s cubic-bezier(0.645, 0.045, 0.355, 1);
+    transition: width 0.65s cubic-bezier(0.645, 0.045, 0.355, 1), background 0.65s cubic-bezier(0.645, 0.045, 0.355, 1);
+    background: rgba(0, 0, 0, 0.1);
+    border: 1px solid #ffffff;
+    border-bottom: 0;
+    display: block;
+    font-weight: 300;
+    margin: 0;
+    min-height: 3em;
+    overflow: hidden;
+    padding: 0;
+    width: 19em; }
+    .subscribe .button:hover {
+      box-shadow: 0 6px 20px 0 rgba(0, 0, 0, 0.11) inset; }
+    .subscribe .button .subscribe__link_text {
+      font-weight: 500;
+      line-height: 2.75em; }
+    @media screen and (min-width: 0px) and (max-width: 499px)  {
+      .subscribe .button {
+        width: 3.5em;
+        background: url('../img/i-email.svg') no-repeat;
+        background-position: center; }
+        .subscribe .button .subscribe__link_text {
+          -webkit-transition: opacity 0.2s linear 0.45s;
+          -moz-transition: opacity 0.2s linear 0.45s;
+          transition: opacity 0.2s linear 0.45s;
+          opacity: 0; } }
+  .subscribe .subscribe__text {
+    font-size: 13px;
+    font-size: 1.3rem;
+    display: block;
+    font-weight: 500;
+    padding: 8px; }
+  .subscribe .subscribe__close {
+    display: inline-block;
+    margin-bottom: .4em;
+    text-decoration: none; }
+  .subscribe .subscribe__link:first-child {
+    margin-top: 1.5em; }
+  .subscribe.is_active .button {
+    background: rgba(0, 0, 0, 0.8); }
+    @media screen and (min-width: 0px) and (max-width: 499px)  {
+      .subscribe.is_active .button {
+        width: 12.4em; }
+        .subscribe.is_active .button:after {
+          opacity: 0; }
+        .subscribe.is_active .button .subscribe__link_text {
+          opacity: 1; } }
+  .subscribe.is_active .subscribe__box {
+    background: rgba(0, 0, 0, 0.8);
+    border-bottom-width: 1px;
+    height: 9.4em; }
+    .subscribe.is_active .subscribe__box .button {
+      background: rgba(201, 63, 22, 0.75);
+      border: none; }
+    @media screen and (min-width: 0px) and (max-width: 499px)  {
+      .subscribe.is_active .subscribe__box {
+        width: 8.3em;
+        height: 13.4em; }
+        .subscribe.is_active .subscribe__box .button {
+          width: 8em; } }
 
 .top_image {
   background-size: cover;
