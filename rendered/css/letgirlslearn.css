@@ -1832,6 +1832,42 @@ footer .nested_column--stacked {
     .panel__story .tri-image .tri-image_one, .panel__story .tri-image .tri-image_three {
       display: block; } }
 
+.panel__simplepage p {
+  max-width: 45em;
+  margin: 0 auto;
+  font-size: 1.2em;
+  padding-left: 2.5em;
+  padding-right: 2.5em; }
+  .panel__simplepage p span {
+    font-family: Archer, Archer SSm A, Archer SSm B;
+    color: #A12122;
+    font-size: 1.15em;
+    display: block; }
+  @media screen and (min-width: 0px) and (max-width: 499px)  {
+    .panel__simplepage p {
+      padding-left: 1.5em;
+      padding-right: 1.5em; } }
+.panel__simplepage ul {
+  color: #222;
+  max-width: 45em;
+  margin: 0 auto;
+  font-size: 1.2em;
+  padding-left: 3.5em;
+  padding-right: 2.5em; }
+  .panel__simplepage ul span {
+    font-family: Archer, Archer SSm A, Archer SSm B;
+    color: #A12122;
+    font-size: 1.15em;
+    display: block; }
+  @media screen and (min-width: 0px) and (max-width: 499px)  {
+    .panel__simplepage ul {
+      padding-left: 1.5em;
+      padding-right: 1.5em; } }
+.panel__simplepage img {
+  margin-top: 2.5em;
+  margin-bottom: 3em;
+  width: 100%; }
+
 .breadcrumbs + .panel__story.panel__content {
   padding-top: 1.4em; }
 
