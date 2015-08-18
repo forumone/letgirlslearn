@@ -82,7 +82,7 @@
     min-height: 3em;
     overflow: hidden;
     padding: 0;
-    width: 19em;
+    width: 16em;
 
     &:hover {
       box-shadow: 0 6px 20px 0 rgba(0, 0, 0, 0.11) inset;
@@ -95,7 +95,7 @@
 
     @include media($sm) {
       width: $sm_width;
-      background: url('../img/i-email.svg') no-repeat;
+      background: url('../img/i-subscribe.svg') no-repeat;
       background-position: center;
 
       .subscribe__link_text {
@@ -141,7 +141,7 @@
     .subscribe__box {
       background: $background_dark;
       border-bottom-width: 1px;
-      height: 9.4em;
+      height: 7.1em;
 
       .button{
         background: $background_orange;
@@ -150,7 +150,7 @@
 
       @include media($sm) {
         width: 8.3em;
-        height: 13.4em;
+        height: 8.4em;
 
         .button {
           width: 8em;

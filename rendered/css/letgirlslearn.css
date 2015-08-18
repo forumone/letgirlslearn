@@ -2087,7 +2087,7 @@ footer .nested_column--stacked {
     min-height: 3em;
     overflow: hidden;
     padding: 0;
-    width: 19em; }
+    width: 16em; }
     .subscribe .button:hover {
       box-shadow: 0 6px 20px 0 rgba(0, 0, 0, 0.11) inset; }
     .subscribe .button .subscribe__link_text {
@@ -2096,7 +2096,7 @@ footer .nested_column--stacked {
     @media screen and (min-width: 0px) and (max-width: 499px)  {
       .subscribe .button {
         width: 3.5em;
-        background: url('../img/i-email.svg') no-repeat;
+        background: url('../img/i-subscribe.svg') no-repeat;
         background-position: center; }
         .subscribe .button .subscribe__link_text {
           -webkit-transition: opacity 0.2s linear 0.45s;
@@ -2127,14 +2127,14 @@ footer .nested_column--stacked {
   .subscribe.is_active .subscribe__box {
     background: rgba(0, 0, 0, 0.8);
     border-bottom-width: 1px;
-    height: 9.4em; }
+    height: 7.1em; }
     .subscribe.is_active .subscribe__box .button {
       background: rgba(201, 63, 22, 0.75);
       border: none; }
     @media screen and (min-width: 0px) and (max-width: 499px)  {
       .subscribe.is_active .subscribe__box {
         width: 8.3em;
-        height: 13.4em; }
+        height: 8.4em; }
         .subscribe.is_active .subscribe__box .button {
           width: 8em; } }
 
