@@ -141,7 +141,7 @@
     .subscribe__box {
       background: $background_dark;
       border-bottom-width: 1px;
-      height: 7.1em;
+      height: 7.0em;
 
       .button{
         background: $background_orange;
@@ -150,7 +150,7 @@
 
       @include media($sm) {
         width: 8.3em;
-        height: 8.4em;
+        height: 8.3em;
 
         .button {
           width: 8em;

@@ -2127,14 +2127,14 @@ footer .nested_column--stacked {
   .subscribe.is_active .subscribe__box {
     background: rgba(0, 0, 0, 0.8);
     border-bottom-width: 1px;
-    height: 7.1em; }
+    height: 7em; }
     .subscribe.is_active .subscribe__box .button {
       background: rgba(201, 63, 22, 0.75);
       border: none; }
     @media screen and (min-width: 0px) and (max-width: 499px)  {
       .subscribe.is_active .subscribe__box {
         width: 8.3em;
-        height: 8.4em; }
+        height: 8.3em; }
         .subscribe.is_active .subscribe__box .button {
           width: 8em; } }
 
