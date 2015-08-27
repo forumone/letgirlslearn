@@ -161,7 +161,7 @@
     padding-left:2.5em;
     padding-right:2.5em;
     span {
-      font-family: Archer, Archer SSm A, Archer SSm B;
+      font-family: Archer, Archer SSm A, Archer SSm B, serif;
       color: $primary;
       //font-weight: 600;
       font-size: 1.15em;
@@ -209,55 +209,29 @@
       }
     }
   }
-}
 
-.panel__simplepage {
+  &.simplepage {
+    ul {
+      color: $black;
+      max-width: 45em;
+      margin:0 auto;
+      font-size:1.2em;
+      padding-left:3.5em;
+      padding-right:2.5em;
+      span {
+        font-family: Archer, Archer SSm A, Archer SSm B, serif;
+        color: $primary;
+        //font-weight: 600;
+        font-size: 1.15em;
+        display:block;
+      }
 
-  p {
-    max-width: 45em;
-    margin:0 auto;
-    font-size:1.2em;
-    padding-left:2.5em;
-    padding-right:2.5em;
-    span {
-      font-family: Archer, Archer SSm A, Archer SSm B;
-      color: $primary;
-      //font-weight: 600;
-      font-size: 1.15em;
-      display:block;
-    }
-
-    @include media($sm) {
-      padding-left: 1.5em;
-      padding-right: 1.5em;
-    }
-  }
-  ul {
-    color: #222;
-    max-width: 45em;
-    margin:0 auto;
-    font-size:1.2em;
-    padding-left:3.5em;
-    padding-right:2.5em;
-    span {
-      font-family: Archer, Archer SSm A, Archer SSm B;
-      color: $primary;
-      //font-weight: 600;
-      font-size: 1.15em;
-      display:block;
-    }
-
-    @include media($sm) {
-      padding-left: 1.5em;
-      padding-right: 1.5em;
+      @include media($sm) {
+        padding-left: 1.5em;
+        padding-right: 1.5em;
+      }
     }
   }
-  img {
-    margin-top: 2.5em;
-    margin-bottom:3em;
-    width: 100%;
-  }
-  
 }
 
 .breadcrumbs + .panel__story.panel__content {
