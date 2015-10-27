@@ -1,9 +1,9 @@
 ---
 layout: parallax
 title: Let Girls Learn
-subtitle: The Eleven Countries
+subtitle: The Countries
 banner_image: countries_hero.jpg
-description: "In the first year of the Let Girls Learn collaboration, Peace Corps will initially target 11 countries where we can make a real difference."
+description: "In the first year of the Let Girls Learn collaboration, Peace Corps will initially target these countries where we can make a real difference."
 ---
 
 {% include static_page_header.html %}
@@ -42,14 +42,14 @@ description: "In the first year of the Let Girls Learn collaboration, Peace Corp
     <div class="anchor_linker" id="pillar1"></div>
     <article class="panel__content" style="padding-top:0;" id="first">
       <div class="block">
-      {% include breadcrumbs.html breadcrumb_title='The Eleven Countries' outside_block='True' %}
+      {% include breadcrumbs.html breadcrumb_title='The Countries' outside_block='True' %}
         <aside class="block__side">
           <img src="img/maps/all.jpg" class="map__image" alt="Map of the World" />
         </aside>
         <article class="block__content">
-          <h2 class="t-heading--2">The Eleven Countries</h2>
+          <h2 class="t-heading--2">The Countries</h2>
           <p>
-            In the first year of the Let Girls Learn collaboration, Peace Corps will initially target 11 countries where we can make a real difference: {% for country in site.data.countries %}{% if forloop.last %}and {% endif %}{{ country.name }}{% if forloop.last %}{% else %}, {% endif %}{% endfor %}. Browse below for more information about the obstacles to education girls face in these countries.
+            In the first year of the Let Girls Learn collaboration, Peace Corps will initially target these countries where we can make a real difference: {% for country in site.data.countries %}{% if forloop.last %}and {% endif %}{{ country.name }}{% if forloop.last %}{% else %}, {% endif %}{% endfor %}. Browse below for more information about the obstacles to education girls face in these countries.
           </p>
         </article>
         <div style="clear: both"></div>
