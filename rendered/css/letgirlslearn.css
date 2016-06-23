@@ -1564,7 +1564,7 @@ p + p {
   margin-right: 1.6393442623%;
   width: 100%;
   margin-right: 0;
-  min-height: 10.2em; }
+  min-height: 15.2em; }
   .block .block__content_full:last-child {
     margin-right: 0; }
   @media screen and (min-width: 500px) and (max-width: 899px)  {
@@ -1805,7 +1805,7 @@ footer .nested_column--stacked {
       margin-left: 8.446866485%;
       padding: 1.66666em;
       position: absolute;
-      top: 10%;
+      top: 3%;
       z-index: 100; }
       .panel.panel--a .panel__content:last-child {
         margin-right: 0; }

@@ -81,7 +81,7 @@
   .block__content_full {
     @include span-columns(10 of 10);
     margin-right: 0;
-    min-height: 10.2em;
+    min-height: 15.2em;
 
     @include media($md) {
       @include span-columns(9 of 9);
