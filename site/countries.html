@@ -43,15 +43,15 @@ description: "In the first year of the Let Girls Learn collaboration, Peace Corp
     <article class="panel__content" style="padding-top:0;" id="first">
       <div class="block">
       {% include breadcrumbs.html breadcrumb_title='The Countries' outside_block='True' %}
-        <aside class="block__side">
-          <img src="img/maps/all.jpg" class="map__image" alt="Map of the World" />
-        </aside>
-        <article class="block__content">
+        <article class="block__content_full">
           <h2 class="t-heading--2">The Countries</h2>
           <p>
             In the first year of the Let Girls Learn collaboration, Peace Corps will initially target these countries where we can make a real difference: {% for country in site.data.countries %}{% if forloop.last %}and {% endif %}{{ country.name }}{% if forloop.last %}{% else %}, {% endif %}{% endfor %}. Browse below for more information about the obstacles to education girls face in these countries.
           </p>
         </article>
+        <aside class="block__bottom">
+          <img src="img/maps/all-full.jpg" class="map__image" alt="Map of the World" />
+        </aside>
         <div style="clear: both"></div>
         {% for next_country in site.data.countries %}
           {% if forloop.index == 1 %}
